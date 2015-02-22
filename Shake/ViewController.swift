@@ -54,5 +54,8 @@ class ViewController: UIViewController, NSURLSessionDelegate {
         task.resume()
     }
 
+    @IBAction func selectContactPressed(sender: AnyObject) {
+        self.performSegueWithIdentifier("show-contacts", sender: self)
+    }
 }
 

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F226089E1A9A5DC500FFEE57 /* ShowContactsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F226089D1A9A5DC500FFEE57 /* ShowContactsTableViewController.swift */; };
 		F24EA1141A9A2ABC00658A8B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24EA1131A9A2ABC00658A8B /* AppDelegate.swift */; };
 		F24EA1171A9A2ABC00658A8B /* Shake.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F24EA1151A9A2ABC00658A8B /* Shake.xcdatamodeld */; };
 		F24EA1191A9A2ABC00658A8B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24EA1181A9A2ABC00658A8B /* ViewController.swift */; };
@@ -27,6 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F226089D1A9A5DC500FFEE57 /* ShowContactsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowContactsTableViewController.swift; sourceTree = "<group>"; };
 		F24EA10E1A9A2ABC00658A8B /* Shake.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Shake.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F24EA1121A9A2ABC00658A8B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F24EA1131A9A2ABC00658A8B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -82,6 +84,7 @@
 				F24EA1131A9A2ABC00658A8B /* AppDelegate.swift */,
 				F24EA1181A9A2ABC00658A8B /* ViewController.swift */,
 				F24EA11A1A9A2ABC00658A8B /* Main.storyboard */,
+				F226089D1A9A5DC500FFEE57 /* ShowContactsTableViewController.swift */,
 				F24EA11D1A9A2ABC00658A8B /* Images.xcassets */,
 				F24EA11F1A9A2ABC00658A8B /* LaunchScreen.xib */,
 				F24EA1151A9A2ABC00658A8B /* Shake.xcdatamodeld */,
@@ -218,6 +221,7 @@
 				F24EA1191A9A2ABC00658A8B /* ViewController.swift in Sources */,
 				F24EA1171A9A2ABC00658A8B /* Shake.xcdatamodeld in Sources */,
 				F24EA1141A9A2ABC00658A8B /* AppDelegate.swift in Sources */,
+				F226089E1A9A5DC500FFEE57 /* ShowContactsTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -411,6 +415,7 @@
 				F24EA1321A9A2ABC00658A8B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F24EA1331A9A2ABC00658A8B /* Build configuration list for PBXNativeTarget "ShakeTests" */ = {
 			isa = XCConfigurationList;
@@ -419,6 +424,7 @@
 				F24EA1351A9A2ABC00658A8B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
