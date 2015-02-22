@@ -75,28 +75,35 @@ class ShowContactsTableViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        //println(allContacts[indexPath.row])
+        var data:NSMutableDictionary = NSMutableDictionary()
+        data["__method__"] = "send.contact"
+        
         let contactRef: ABRecordRef = allContacts[indexPath.row]
-        //println(contactRef.phoneNumber!)
+        
         let name = ABRecordCopyValue(contactRef, kABPersonFirstNameProperty).takeUnretainedValue() as? NSString
         println(name!)
+        data["name"] = name
         let emailProperties:ABMultiValueRef = ABRecordCopyValue(contactRef, kABPersonEmailProperty).takeRetainedValue()
-        //ABMutableMultiValueRef multi = ABRecordCopyValue(person, kABPersonEmailProperty);
+
         for(var i = 0; i < ABMultiValueGetCount(emailProperties) ; i++){
             let label:String = ABMultiValueCopyLabelAtIndex(emailProperties, i).takeRetainedValue()
             let email:String = ABMultiValueCopyValueAtIndex(emailProperties, i).takeRetainedValue() as String
             
             println(label + " : " + email)
+            data["email"] = email
         }
         
         let phoneProperties:ABMultiValueRef = ABRecordCopyValue(contactRef, kABPersonPhoneProperty).takeRetainedValue()
-        //ABMutableMultiValueRef multi = ABRecordCopyValue(person, kABPersonEmailProperty);
+
         for(var i = 0; i < ABMultiValueGetCount(phoneProperties) ; i++){
             let label:String = ABMultiValueCopyLabelAtIndex(phoneProperties, i).takeRetainedValue()
             let phone:String = ABMultiValueCopyValueAtIndex(phoneProperties, i).takeRetainedValue() as String
             
             println(label + " : " + phone)
+            data["phone"] = phone
         }
+        
+        NetworkController.sharedInstance.networkRequest(data)
     }
     
 

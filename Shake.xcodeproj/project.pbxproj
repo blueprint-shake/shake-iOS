@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		F226089E1A9A5DC500FFEE57 /* ShowContactsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F226089D1A9A5DC500FFEE57 /* ShowContactsTableViewController.swift */; };
+		F22608A01A9A74C000FFEE57 /* NetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F226089F1A9A74C000FFEE57 /* NetworkController.swift */; };
 		F24EA1141A9A2ABC00658A8B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24EA1131A9A2ABC00658A8B /* AppDelegate.swift */; };
 		F24EA1171A9A2ABC00658A8B /* Shake.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F24EA1151A9A2ABC00658A8B /* Shake.xcdatamodeld */; };
 		F24EA1191A9A2ABC00658A8B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24EA1181A9A2ABC00658A8B /* ViewController.swift */; };
@@ -29,6 +30,7 @@
 
 /* Begin PBXFileReference section */
 		F226089D1A9A5DC500FFEE57 /* ShowContactsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowContactsTableViewController.swift; sourceTree = "<group>"; };
+		F226089F1A9A74C000FFEE57 /* NetworkController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkController.swift; sourceTree = "<group>"; };
 		F24EA10E1A9A2ABC00658A8B /* Shake.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Shake.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F24EA1121A9A2ABC00658A8B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F24EA1131A9A2ABC00658A8B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 			children = (
 				F24EA1131A9A2ABC00658A8B /* AppDelegate.swift */,
 				F24EA1181A9A2ABC00658A8B /* ViewController.swift */,
+				F226089F1A9A74C000FFEE57 /* NetworkController.swift */,
 				F24EA11A1A9A2ABC00658A8B /* Main.storyboard */,
 				F226089D1A9A5DC500FFEE57 /* ShowContactsTableViewController.swift */,
 				F24EA11D1A9A2ABC00658A8B /* Images.xcassets */,
@@ -218,6 +221,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F22608A01A9A74C000FFEE57 /* NetworkController.swift in Sources */,
 				F24EA1191A9A2ABC00658A8B /* ViewController.swift in Sources */,
 				F24EA1171A9A2ABC00658A8B /* Shake.xcdatamodeld in Sources */,
 				F24EA1141A9A2ABC00658A8B /* AppDelegate.swift in Sources */,
