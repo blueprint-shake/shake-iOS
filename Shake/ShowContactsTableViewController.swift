@@ -83,25 +83,35 @@ class ShowContactsTableViewController: UITableViewController {
         let name = ABRecordCopyValue(contactRef, kABPersonFirstNameProperty).takeUnretainedValue() as? NSString
         println(name!)
         data["name"] = name
+        
         let emailProperties:ABMultiValueRef = ABRecordCopyValue(contactRef, kABPersonEmailProperty).takeRetainedValue()
 
-        for(var i = 0; i < ABMultiValueGetCount(emailProperties) ; i++){
-            let label:String = ABMultiValueCopyLabelAtIndex(emailProperties, i).takeRetainedValue()
-            let email:String = ABMultiValueCopyValueAtIndex(emailProperties, i).takeRetainedValue() as String
-            
-            println(label + " : " + email)
-            data["email"] = email
-        }
+//        for(var i = 0; i < ABMultiValueGetCount(emailProperties) ; i++){
+//            let label:String = ABMultiValueCopyLabelAtIndex(emailProperties, i).takeRetainedValue()
+//            let email:String = ABMultiValueCopyValueAtIndex(emailProperties, i).takeRetainedValue() as String
+//            
+//            println(label + " : " + email)
+//            data["email"] = email
+//        }
         
         let phoneProperties:ABMultiValueRef = ABRecordCopyValue(contactRef, kABPersonPhoneProperty).takeRetainedValue()
 
-        for(var i = 0; i < ABMultiValueGetCount(phoneProperties) ; i++){
-            let label:String = ABMultiValueCopyLabelAtIndex(phoneProperties, i).takeRetainedValue()
-            let phone:String = ABMultiValueCopyValueAtIndex(phoneProperties, i).takeRetainedValue() as String
-            
-            println(label + " : " + phone)
-            data["phone"] = phone
-        }
+//        for(var i = 0; i < ABMultiValueGetCount(phoneProperties) ; i++){
+//            let label:String = ABMultiValueCopyLabelAtIndex(phoneProperties, i).takeRetainedValue()
+//            let phone:String = ABMultiValueCopyValueAtIndex(phoneProperties, i).takeRetainedValue() as String
+//            
+//            println(label + " : " + phone)
+//            data["phone"] = phone
+//        }
+        
+        let email:String = ABMultiValueCopyValueAtIndex(emailProperties, 0).takeRetainedValue() as String
+        let phone:String = ABMultiValueCopyValueAtIndex(phoneProperties, 0).takeRetainedValue() as String
+        
+        println("Email: " + email)
+        println("Phone: " + phone)
+        
+        data["email"] = email
+        data["phone"] = phone
         
         NetworkController.sharedInstance.networkRequest(data)
     }
